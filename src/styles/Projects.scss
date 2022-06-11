@@ -1,0 +1,32 @@
+.Projects {
+  text-align: center;
+  margin-top: 8rem;
+  color: white;
+  overflow: hidden;
+  h2 {
+    color: var(--light-color);
+    font-weight: 100;
+    margin-bottom: 1rem;
+  }
+  .projects-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: 1rem;
+    padding: 1rem;
+  }
+}
+@media only screen and(max-width:800px) {
+  .Projects {
+    .projects-container {
+      grid-template-columns: 50% 50%;
+    }
+  }
+}
+@media only screen and(max-width:600px) {
+  .Projects {
+    .projects-container {
+      grid-template-columns: 100%;
+      row-gap: 1rem;
+    }
+  }
+}

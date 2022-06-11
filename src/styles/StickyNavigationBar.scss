@@ -1,0 +1,68 @@
+
+
+.StickyNavigationBar {
+  width: calc(30% * 0.8);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  bottom: 1rem;
+  left: 38%;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background-color: rgba($color: black, $alpha: 0.2);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  animation: show-up-animation 2s forwards;
+
+  a {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+    font-size: 1.15rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      background-color: rgba($color: black, $alpha: 1);
+      color: var(--light-color);
+      animation: icon-animation 0.5s ease-in-out forwards;
+    }
+  }
+}
+@keyframes icon-animation {
+  50% {
+    transform: scale(1.25, 1.25);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes show-up-animation {
+  0% {
+    opacity: 0;
+    bottom: -3rem;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .StickyNavigationBar {
+    width: calc(60% * 0.8);
+    left: 26%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .StickyNavigationBar {
+    width: calc(100% * 0.8);
+    left: 10%;
+  }
+}

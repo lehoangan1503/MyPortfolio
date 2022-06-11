@@ -1,0 +1,25 @@
+.Contact {
+  text-align: center;
+  color: white;
+  margin-top: 8rem;
+  margin-bottom: 15vh;
+  h2 {
+    color: var(--light-color);
+    font-weight: 100;
+    margin-bottom: 4rem;
+  }
+  .contact-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media only screen and(max-width:900px) {
+  .Contact {
+    .contact-container {
+      grid-template-columns: 80%;
+      row-gap: 1rem;
+      justify-content: center;
+    }
+  }
+}

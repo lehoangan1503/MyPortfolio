@@ -1,0 +1,65 @@
+.SlideImage {
+  width: 45%;
+  margin: 0 auto;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  line-height: 0;
+  border: 1px solid rgba($color: var(--light-color), $alpha: 0.3);
+  left: -100%;
+  opacity: 0;
+
+  animation: slide-show-up-animation 1s ease-in-out forwards;
+
+  .images-container {
+    img {
+      width: 100%;
+      margin-left: 100%;
+      animation: slide-animation 0.5s ease-in-out forwards;
+    }
+  }
+  .indexes-dot {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    padding: 0.5rem 0;
+    bottom: 0.5rem;
+    left: 35%;
+    border-radius: 50px;
+    backdrop-filter: blur(3px);
+    span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      opacity: 0.3;
+      border-radius: 50%;
+    }
+
+    :nth-child(2) {
+      margin: 0 1rem;
+    }
+  }
+}
+@keyframes slide-animation {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+@keyframes slide-show-up-animation {
+  50% {
+    opacity: 0.2;
+  }
+
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
