@@ -15,7 +15,7 @@ const projects = [
     projectUrlImage: twitterPostImage,
     projectName: "Twitter Post clone older version",
     sourceLink: "https://github.com/lehoangan1503/twitter-post-clone",
-    liveDemoLink: "https://anlehoang-portfolio.herokuapp.com/",
+    liveDemoLink: "https://anlehoang-twitter.herokuapp.com/",
   },
 ];
 const listProject = projects.map((project) => {
